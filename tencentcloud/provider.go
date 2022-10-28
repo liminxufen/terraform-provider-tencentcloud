@@ -699,6 +699,9 @@ TencentCloud ServiceMesh(TCM)
 	tencentcloud_tcm_mesh
 	tencentcloud_tcm_cluster_attachment
 
+dcdb
+  Resource
+    tencentcloud_dcdb_db_instance
 */
 package tencentcloud
 
@@ -1259,6 +1262,7 @@ func Provider() terraform.ResourceProvider {
 			// "tencentcloud_teo_default_certificate":                  resourceTencentCloudTeoDefaultCertificate(),
 			"tencentcloud_tcm_mesh":               resourceTencentCloudTcmMesh(),
 			"tencentcloud_tcm_cluster_attachment": resourceTencentCloudTcmClusterAttachment(),
+			"tencentcloud_dcdb_db_instance":       resourceTencentCloudDcdbDbInstance(),
 		},
 
 		ConfigureFunc: providerConfigure,
