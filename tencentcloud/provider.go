@@ -1263,6 +1263,9 @@ func Provider() terraform.ResourceProvider {
 			"tencentcloud_tcm_mesh":               resourceTencentCloudTcmMesh(),
 			"tencentcloud_tcm_cluster_attachment": resourceTencentCloudTcmClusterAttachment(),
 			"tencentcloud_dcdb_db_instance":       resourceTencentCloudDcdbDbInstance(),
+			"tencentcloud_dcdb_hourdb_instance":   resourceTencentCloudDcdbHourDbInstance(),
+			"tencentcloud_dcdb_account":           resourceTencentCloudDcdbAccount(),
+			"tencentcloud_dcdb_security_group":    resourceTencentCloudDcdbSecurityGroup(),
 		},
 
 		ConfigureFunc: providerConfigure,
