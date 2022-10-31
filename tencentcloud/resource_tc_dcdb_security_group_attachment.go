@@ -4,7 +4,7 @@ Provides a resource to create a dcdb security_group
 Example Usage
 
 ```hcl
-resource "tencentcloud_dcdb_security_group" "security_group" {
+resource "tencentcloud_dcdb_security_group_attachment" "security_group" {
   product = "dcdb"
   security_group_id = ""
   instance_ids = ""
@@ -15,7 +15,7 @@ Import
 
 dcdb security_group can be imported using the id, e.g.
 ```
-$ terraform import tencentcloud_dcdb_security_group.security_group securityGroup_id
+$ terraform import tencentcloud_dcdb_security_group_attachment.security_group securityGroup_id
 ```
 */
 
@@ -67,7 +67,7 @@ func resourceTencentCloudDcdbSecurityGroup() *schema.Resource {
 }
 
 func resourceTencentCloudDcdbSecurityGroupCreate(d *schema.ResourceData, meta interface{}) error {
-	defer logElapsed("resource.tencentcloud_dcdb_security_group.create")()
+	defer logElapsed("resource.tencentcloud_dcdb_security_group_attachment.create")()
 	defer inconsistentCheck(d, meta)()
 
 	logId := getLogId(contextNil)
@@ -119,7 +119,7 @@ func resourceTencentCloudDcdbSecurityGroupCreate(d *schema.ResourceData, meta in
 }
 
 func resourceTencentCloudDcdbSecurityGroupRead(d *schema.ResourceData, meta interface{}) error {
-	defer logElapsed("resource.tencentcloud_dcdb_security_group.read")()
+	defer logElapsed("resource.tencentcloud_dcdb_security_group_attachment.read")()
 	defer inconsistentCheck(d, meta)()
 
 	logId := getLogId(contextNil)
@@ -166,7 +166,7 @@ func resourceTencentCloudDcdbSecurityGroupRead(d *schema.ResourceData, meta inte
 }
 
 func resourceTencentCloudDcdbSecurityGroupDelete(d *schema.ResourceData, meta interface{}) error {
-	defer logElapsed("resource.tencentcloud_dcdb_security_group.delete")()
+	defer logElapsed("resource.tencentcloud_dcdb_security_group_attachment.delete")()
 	defer inconsistentCheck(d, meta)()
 
 	logId := getLogId(contextNil)
